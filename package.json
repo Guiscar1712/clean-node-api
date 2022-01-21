@@ -6,6 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Guiscar1712/clean-node-api.git"
@@ -15,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/Guiscar1712/clean-node-api/issues"
   },
-  "homepage": "https://github.com/Guiscar1712/clean-node-api#readme"
+  "homepage": "https://github.com/Guiscar1712/clean-node-api#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.2.2"
+  }
 }
