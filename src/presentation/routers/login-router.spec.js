@@ -7,9 +7,15 @@ class LoginRouter {
     }
     const { email, password } = httpRequest.body
     if (!email || !password) {
-      return {
-        statusCode: 400
-      }
+      return HttpResponse.badRequest()
+    }
+  }
+}
+
+class HttpResponse {
+  static badRequest () {
+    return {
+      statusCode: 400
     }
   }
 }
