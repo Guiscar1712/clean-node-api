@@ -6,16 +6,8 @@
   "scripts": {
     "test": "jest"
   },
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "standard": {
+    "env": ["jest"]
   },
   "repository": {
     "type": "git",
@@ -31,5 +23,9 @@
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "lint-staged": "^12.2.2"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7"
   }
 }
